@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,62 +6,336 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Blog.da.Mayers</title>
+
     <style>
-        
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff3f6;
+            color: #583d49;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        header {
+            background-color: #e9a9bd;
+            color: #ffffff;
+            text-align: center;
+            padding: 35px 15px 25px;
+            box-shadow: 0 4px 12px rgba(120, 65, 85, 0.15);
+            transition: background-color 0.3s ease;
+        }
+
+        header h1 {
+            margin: 10px 0 5px;
+            font-size: 1.8rem;
+        }
+
+        header p {
+            margin: 0;
+            opacity: 0.95;
+            font-size: 0.95rem;
+        }
+
+        main {
+            background-color: #fce5ec;
+            padding: 35px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: calc(100vh - 180px);
+            transition: background-color 0.3s ease;
+        }
+
+        article {
+            background-color: #ffffff;
+            color: #583d49;
+            border-radius: 14px;
+            padding: 22px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 12px rgba(210, 130, 155, 0.12);
+            border: 1px solid #f2c5d3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background-color 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        article:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 18px rgba(210, 130, 155, 0.2);
+        }
+
+        article img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+
+        article h2 {
+            color: #bd718f;
+            margin-top: 10px;
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+
+        .artigo-autor {
+            color: #c08099;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+
+        article p {
+            line-height: 1.5;
+            color: #684c59;
+            font-size: 0.93rem;
+        }
+
+        .botoes-container {
+            display: flex;
+            gap: 8px;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #f8e5eb;
+        }
+
+        article button {
+            cursor: pointer;
+            padding: 8px 14px;
+            border: none;
+            border-radius: 8px;
+            background-color: #e9a9bd;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 0.85rem;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        article button:hover {
+            background-color: #d888a5;
+            transform: translateY(-1px);
+        }
+
+        article button:active {
+            transform: translateY(0);
+        }
+
+        article button span {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            margin-left: 3px;
+        }
+
+        .btn-tema-flutuante {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            border: 3px solid #e9a9bd;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 0;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+
+        .btn-tema-flutuante:hover {
+            transform: scale(1.1);
+        }
+
+        .icone-circulo-dividido {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: linear-gradient(90deg, #bd718f 50%, #ffffff 50%);
+            border: 2px solid #bd718f;
+            box-sizing: border-box;
+        }
+
+        /* MODO ESCURO */
+
+        body.dark-mode {
+            background-color: #21171d;
+            color: #f5dce6;
+        }
+
+        body.dark-mode header {
+            background-color: #593547;
+        }
+
+        body.dark-mode main {
+            background-color: #191218;
+        }
+
+        body.dark-mode article {
+            background-color: #30212a;
+            color: #f5dce6;
+            border-color: #593547;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        body.dark-mode article h2 {
+            color: #e9a9bd;
+        }
+
+        body.dark-mode .artigo-autor {
+            color: #d899b1;
+        }
+
+        body.dark-mode article p {
+            color: #f0d5e0;
+        }
+
+        body.dark-mode .botoes-container {
+            border-top-color: #503542;
+        }
+
+        body.dark-mode article button {
+            background-color: #9e617c;
+        }
+
+        body.dark-mode article button:hover {
+            background-color: #bd7896;
+        }
+
+        body.dark-mode .btn-tema-flutuante {
+            background-color: #30212a;
+            border-color: #e9a9bd;
+        }
+
+        body.dark-mode .icone-circulo-dividido {
+            background: linear-gradient(90deg, #ffffff 50%, #30212a 50%);
+            border-color: #ffffff;
+        }
+
     </style>
 </head>
 
 <body>
+
     <header>
-        <h1>Blog.da.Mayers</h1>
-        <p>Perfil voltado para garotas que
-            buscam ser sua melhor versão</p>
+        <h1>Blog.da.Mayers 🎀</h1>
+        <p>Perfil voltado para garotas que buscam ser sua melhor versão</p>
     </header>
+
     <main>
-    <article>
-        <img src="blog1.jpeg"
-            alt="Ilustracao minimalista e aesthetic sobre fundo suave em degrade rosa-claro e amarelo. No centro, tracos finos na cor dourada representam uma mao delicada segurando uma flor, cercada por elementos como coracoes, estrelas, pontos e uma lua crescente.">
-        <div>
 
-            <h2>Meu Primeiro Post</h2>
-            <p class="artigo-autor">Por: Emilly Pacheco</p>
-            <p>​ Oi, meninas! Sejam muito bem-vindas ao meu Blog!
-                Aqui é o lugar perfeito para
-                compartilhar ideias, descobrir novidades,
-                se inspirar e, claro, deixar cada momento ainda mais especial!💕​</p>
-            <button>❤️ <span>0</span></button>
-            <button> 🤩<span>0</span></button>
-            <button> 😘<span>0</span></button>
-        </div>
-    </article>
-    <article>
-        <img src="blog2.jpeg"
-            alt="Ilustração minimalista e aesthetic sobre fundo suave em degradê rosa-claro e amarelo. No centro, traços finos na cor dourada representam uma mão delicada segurando uma flor, cercada por elementos como corações, estrelas, pontos e uma lua crescente.">
-        <div>
+        <article>
+            <div>
+                <img src="blog1.jpeg"
+                    alt="Ilustração minimalista aesthetic de uma mão segurando uma flor">
 
-            <h2>Meu Segundo Post</h2>
-            <p class="artigo-autor">Por: Emilly Pacheco</p>
-            <p>🎀 O que vem por aí?
-                Dicas, autocuidado, reflexões, estudos, vida de menina ✨🌷🎀📚💗E muito mais! ♡​</p>
-            <button>❤️ <span>0</span></button>
-            <button> 🤩<span>0</span></button>
-            <button> 😘<span>0</span></button>
-        </div>
+                <h2>Meu Primeiro Post</h2>
+
+                <p class="artigo-autor">
+                    <strong>Por:</strong> Emilly Pacheco
+                </p>
+
+                <p>
+                    Oi, meninas! Sejam muito bem-vindas ao meu Blog!
+                    Aqui é o lugar perfeito para compartilhar ideias,
+                    descobrir novidades, se inspirar e, claro,
+                    deixar cada momento ainda mais especial!💕
+                </p>
+            </div>
+
+            <div class="botoes-container">
+                <button>❤️ <span>0</span></button>
+                <button>🤩 <span>0</span></button>
+                <button>😘 <span>0</span></button>
+            </div>
         </article>
+
+        <article>
+            <div>
+                <img src="blog2.jpeg"
+                    alt="Ilustração minimalista aesthetic de uma mão segurando uma flor">
+
+                <h2>Meu Segundo Post</h2>
+
+                <p class="artigo-autor">
+                    <strong>Por:</strong> Emilly Pacheco
+                </p>
+
+                <p>
+                    🎀 O que vem por aí?
+                    Dicas, autocuidado, reflexões, estudos,
+                    vida de menina ✨🌷🎀📚💗
+                    E muito mais! ♡
+                </p>
+            </div>
+
+            <div class="botoes-container">
+                <button>❤️ <span>0</span></button>
+                <button>🤩 <span>0</span></button>
+                <button>😘 <span>0</span></button>
+            </div>
+        </article>
+
     </main>
+
+    <button id="theme-toggle"
+        class="btn-tema-flutuante"
+        aria-label="Alternar modo claro e escuro">
+
+        <span class="icone-circulo-dividido"></span>
+
+    </button>
+
+    <script>
+
+        const botoesCurtir = document.querySelectorAll("article button");
+
+        botoesCurtir.forEach(function (botao) {
+
+            let curtiu = false;
+
+            botao.addEventListener("click", function () {
+
+                const texto = botao.querySelector("span");
+                let valorAtual = parseInt(texto.textContent);
+
+                if (!curtiu) {
+                    texto.textContent = valorAtual + 1;
+                    curtiu = true;
+                } else {
+                    texto.textContent = valorAtual - 1;
+                    curtiu = false;
+                }
+
+            });
+
+        });
+
+        const themeToggleBtn = document.getElementById("theme-toggle");
+
+        themeToggleBtn.addEventListener("click", function () {
+
+            document.body.classList.toggle("dark-mode");
+
+        });
+
+    </script>
+
 </body>
-<script>
-    const botoes = document.querySelectorAll("button");
-
-    botoes.forEach(function (botao) {
-        botao.addEventListener("click", botaoClicado);
-        function botaoClicado() {
-            console.log("fui clicado");
-            let texto = botao.querySelector("span");
-              texto.textContent++;
-            }
-    })
-</script>
-
 </html>
