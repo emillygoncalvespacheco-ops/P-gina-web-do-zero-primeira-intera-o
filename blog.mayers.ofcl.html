@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog</title>
+<style>
+:root{
+--cor-primaria: #fff3f6;
+--cor-secundaria: #583d49;
+--cor-fundo: #e9a9bd;
+--cor-texto: #151428;
+--cor-constraste: #f3eef7;
+--cor-botao: #cf1a1a;
+}
+
+body {
+max-width: 100vw;
+transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+background-color: #e9a9bd7c;
+color: #9c9e18ab;
+text-align: center;
+margin: 0 auto;
+padding: 16px;
+}
+
+main {
+background-color: #fff3f6;
+color: #583d49;
+margin: 0 auto;
+padding: 16px;
+display: flex;
+flex-wrap: wrap;
+}
+
+article{
+display: flex;
+border: 1px solid #583d49;
+margin: 16px;
+gap: 16px;
+padding: 16px;
+flex: 1 1 30%;
+}
+
+img {
+width: 80px;
+height: 80px;
+}
+
+.artigo-autor {
+font-weight: bold;
+}
+
+/* BOTÃO DE ALTERAÇÃO DE TEMA */
+
+#theme-toggle {
+position: fixed;
+width: 52px;
+height: 52px;
+bottom: 24px;
+right: 24px;
+border: 2px solid #526649;
+border-radius: 50%;
+background-color: #ffffff;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+padding: 0;
+z-index: 9999;
+transition: background-color 0.3s, border-color 0.3s;
+}
+
+.theme-icon {
+width: 26px;
+height: 26px;
+border-radius: 50%;
+display: block;
+background: linear-gradient(
+90deg,
+#394733 50%,
+#ffffff 50%
+);
+transition: background 0.3s;
+}
+
+/* MODO ESCURO */
+
+body.dark-mode {
+background-color: #1f261d;
+color: #ffffff;
+}
+
+body.dark-mode header {
+background-color: #1f261d;
+color: #8da383;
+}
+
+body.dark-mode main {
+background-color: #1f261d;
+color: #ffffff;
+}
+
+body.dark-mode article {
+border-color: #8da383;
+}
+
+body.dark-mode #theme-toggle {
+background-color: #1f261d;
+border-color: #8da383;
+}
+
+body.dark-mode .theme-icon {
+background: linear-gradient(
+90deg,
+#ffffff 50%,
+#394733 50%
+);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- BOTÃO DE TEMA -->
+<button id="theme-toggle" type="button" aria-label="Alternar tema" title="Alternar tema">
+<span class="theme-icon"></span>
+</button>
+
+<header>
+<h1>Blog da Mayers</h1>
+<p>Para Garotas que querem ser
+   a sua melhor versão!</p>
+</header>
+
+<main>
+<article>
+<img src="tec.joy" alt="Sua pele merece carinho todos os dias! Descubra como montar uma rotina
+ de skincare com limpeza, hidratação e proteção solar. Aprenda a cuidar do seu tipo de pele,
+  conhecer os produtos certos e criar hábitos que ajudam a manter seu rosto saudável, macio e 
+  iluminado. Afinal, uma pele bonita começa com bons cuidados!.">
+<div>
+<h2>🎀 Skincare: o segredo de uma pele saudável</h2>
+<p class="artigo-autor"> Por: Mayers </p>
+<p>Ter uma pele bonita começa com pequenos cuidados diários! Criar uma rotina de skincare não precisa ser complicado ou caro. O segredo é conhecer seu tipo de pele e escolher produtos adequados para suas necessidades.
+
+   Dicas para começar:
+
+   Lave o rosto com um sabonete facial adequado.
+
+   Use hidratante diariamente.
+
+   Não esqueça do protetor solar.
+
+   Evite dormir de maquiagem.
+
+   Tenha paciência com os resultados!
+
+   Lembre-se: sua pele não precisa ser perfeita para ser linda. O importante é cuidar dela com carinho! 💗</p>
+
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</div>
+</article>
+
+<article>
+<img src="edu.png" alt="Ícone quadrado para blog de tecnologia e educação.
+No centro, um livro aberto com circuitos digitais integrados
+e uma lâmpada acesa saindo do meio.
+Dentro da lâmpada, há um capelo de formatura e conexões de rede.
+Fundo em gradiente azul e verde.">
+<div>
+<h2>🧖🏻‍♀️ Seu próprio spa day em casa</h2>
+<p class="artigo-autor"> Por: Mayers </p>
+<p>Que tal separar um dia da semana para cuidar de você? Um spa day em casa é perfeito para relaxar, renovar as energias e aproveitar um momento especial consigo mesma.
+
+   O que fazer no seu spa day?
+
+   Prepare um banho relaxante.
+
+   Faça uma hidratação capilar.
+
+   Cuide da sua pele.
+
+   Pinte suas unhas.
+
+   Passe seu hidratante favorito.
+
+   Coloque um pijama confortável e assista à sua série preferida.
+
+   O autocuidado também está nos pequenos momentos em que você escolhe desacelerar e dar atenção a si mesma!</p>
+
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</div>
+</article>
+
+<article>
+<img src="tec.money" alt="Ícone quadrado para blog de tecnologia e educação.
+No centro, um livro aberto com circuitos digitais integrados
+e uma lâmpada acesa saindo do meio.
+Dentro da lâmpada, há um capelo de formatura e conexões de rede.
+Fundo em gradiente azul e verde.">
+<div>
+<h2>💄 Maquiagem: descubra seu próprio estilo</h2>
+<p class="artigo-autor"> Por: Mayers </p>
+<p>A maquiagem é uma maneira divertida de expressar sua personalidade! Você pode apostar em uma produção natural para o dia a dia ou experimentar cores e estilos diferentes quando quiser.
+
+   Produtos para ter na nécessaire:
+
+   Gloss ou lip tint.
+
+   Blush.
+
+   Máscara de cílios.
+
+   Corretivo.
+
+   Pó facial.
+
+   Pincéis de maquiagem.
+
+   Experimente diferentes combinações e descubra o que faz você se sentir mais bonita e confiante. Afinal, maquiagem deve ser diversão, não obrigação!</p>
+
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</div>
+</article>
+
+<article>
+<img src="tec.png" alt="Ícone quadrado para blog de tecnologia e educação.
+No centro, um livro aberto com circuitos digitais integrados
+e uma lâmpada acesa saindo do meio.
+Dentro da lâmpada, há um capelo de formatura e conexões de rede.
+Fundo em gradiente azul e verde.">
+<div>
+<h2> 📔 Como ter uma rotina mais organizada</h2>
+<p class="artigo-autor"> Por: Mayers </p>
+<p>Uma rotina organizada pode deixar seus dias muito mais leves e produtivos! Separar alguns minutinhos para planejar suas tarefas ajuda a evitar esquecimentos e ainda permite encontrar tempo para seus cuidados pessoais.
+
+   Hábitos para experimentar:
+
+   Arrume sua cama pela manhã.
+
+   Faça uma lista de tarefas.
+
+   Organize seu quarto.
+
+   Separe suas roupas com antecedência.
+
+   Reserve um horário para estudar.
+
+   Tenha um momento só seu antes de dormir.
+
+   Não precisa fazer tudo perfeitamente. Comece aos poucos e encontre uma rotina que combine com sua vida!</p>
+
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</div>
+</article>
+
+<article>
+<img src="tec.joy" alt="Ícone quadrado para blog de tecnologia e educação.
+No centro, um livro aberto com circuitos digitais integrados
+e uma lâmpada acesa saindo do meio.
+Dentro da lâmpada, há um capelo de formatura e conexões de rede.
+Fundo em gradiente azul e verde.">
+<div>
+<h2>🎀 Cabelos bonitos e bem cuidados</h2>
+<p class="artigo-autor"> Por: Mayers </p>Os g
+<p>Quem não ama sentir os cabelos macios, cheirosos e brilhantes? Ter cabelos bem cuidados exige atenção e uma rotina adequada ao seu tipo de fio.
+
+   Dicas para cuidar dos cabelos:
+
+   Escolha shampoo e condicionador adequados.
+
+   Faça hidratações regularmente.
+
+   Utilize protetor térmico.
+
+   Evite prender os fios com muita força.
+
+   Desembarace com delicadeza.
+
+   Corte as pontinhas quando necessário.
+
+   E não se esqueça: cada cabelo tem sua beleza! Aprenda a cuidar e valorizar o seu. 💕</p>
+
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</div>
+</article>
+
+<article>
+<img src="vec.mey" alt="Ícone quadrado para blog de tecnologia e educação.
+No centro, um livro aberto com circuitos digitais integrados
+e uma lâmpada acesa saindo do meio.
+Dentro da lâmpada, há um capelo de formatura e conexões de rede.
+Fundo em gradiente azul e verde.">
+<div>
+<h2>🍓 Cuide de você de dentro para fora</h2>
+<p class="artigo-autor"> Por: Mayers</p>
+<p>Cuidar da beleza também significa cuidar da saúde e do bem-estar! Pequenos hábitos podem ajudar você a ter mais disposição, melhorar sua rotina e se sentir bem consigo mesma.
+
+   Comece com atitudes simples:
+
+   Beba água durante o dia.
+
+   Tenha uma alimentação variada e equilibrada.
+
+   Durma bem.
+
+   Pratique atividades físicas que você goste.
+
+   Reserve momentos para descansar.
+
+   Cuide da sua saúde emocional.
+
+   A verdadeira beleza também está em se sentir bem, respeitar seus limites e aprender a amar quem você é!</p>
+
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</div>
+</article>
+
+<article>
+<img src="tec.money" alt="Ícone quadrado para blog de tecnologia e educação.
+No centro, um livro aberto com circuitos digitais integrados
+e uma lâmpada acesa saindo do meio.
+Dentro da lâmpada, há um capelo de formatura e conexões de rede.
+Fundo em gradiente azul e verde.">
+<div>
+<h2>O guia da menina cheirosa</h2>
+<p class="artigo-autor"> Por: Mayers </p>
+<p>Existe sensação melhor do que sair do banho, colocar uma roupa limpinha e passar seu perfume favorito? Ser uma menina cheirosa envolve cuidados com a higiene pessoal e pequenos detalhes que fazem toda a diferença.
+
+   Monte sua rotina cheirosinha:
+
+   Tome banhos regularmente.
+
+   Use um hidratante corporal.
+
+   Escolha um perfume que combine com você.
+
+   Mantenha suas roupas limpas.
+
+   Cuide da higiene bucal.
+
+   Tenha sempre um lip balm na bolsa.
+
+   O segredo não é usar muitos produtos, mas encontrar aqueles que fazem você se sentir confortável, fresquinha e confiante!</p>
+
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+</div>
+</article>
+</main>
+
+<script>
+
+// BOTÕES DE CURTIDAS
+
+const botoes = document.querySelectorAll("main article button");
+
+botoes.forEach(function (botao) {
+let curtiu = false;
+botao.addEventListener("click", botaoclicado);
+
+function botaoclicado() {
+console.log("fui clicado");
+let texto = botao.querySelector("span");
+
+if (curtiu === false){
+texto.textContent++;
+curtiu = true;
+}else{
+texto.textContent--;
+curtiu = false;
+}
+}
+});
+
+// ALTERAÇÃO DE TEMA
+
+const botaoTema = document.getElementById("theme-toggle");
+
+// Recuperar tema salvo
+const temaSalvo = localStorage.getItem("tema");
+
+if (temaSalvo === "escuro") {
+document.body.classList.add("dark-mode");
+}
+
+// Alternar tema ao clicar
+botaoTema.addEventListener("click", function () {
+
+document.body.classList.toggle("dark-mode");
+
+const temaAtual = document.body.classList.contains("dark-mode")
+? "escuro"
+: "claro";
+
+localStorage.setItem("tema", temaAtual);
+
+});
+
+</script>
+
+</body>
+</html>
